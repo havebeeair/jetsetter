@@ -1,27 +1,47 @@
-import logo from './logo.svg';
 import './App.css';
+import React, {useState} from "react";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-        <h1>Luis esta aqui</h1>
-        <h2>Canca se fue de viaje</h2>
-      </header>
+    <div className="container">
+      <TopBar/>
+      <Button/>
     </div>
   );
 }
 
 export default App;
+
+function TopBar(){
+
+  let [state, setState] = useState("");
+
+  const handleChange = (event) => {
+    setState(event.target.value);
+  }
+  
+  const handleSubmit = () =>{
+    console.log(state);
+  }
+
+  return(
+    <form>
+        <label>
+          <input className="textTopBar" type="text" value={state} onChange={handleChange} />
+        </label>
+        <input className="submitTopBar" onClick={handleSubmit} type="submit" value="Submit" />
+      </form>
+  )
+}
+
+function Button(){
+
+  const handleButton =() => {
+    console.log("desempacando...")
+  }
+  return(
+    <div >
+        <button className="button" onClick={handleButton}> Marcar todos como desempacados </button>
+      </div>
+  )
+}
