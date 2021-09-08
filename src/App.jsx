@@ -18,6 +18,7 @@ function App() {
           Learn React
         </a>
         <h1>Luis esta aqui</h1>
+        <h2>Canca se fue de viaje</h2>
       </header>
     </div>
   );
