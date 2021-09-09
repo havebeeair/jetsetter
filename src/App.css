@@ -36,5 +36,53 @@
   align-items: center;
   color: palevioletred;
   font-size: 25px;
+  margin: 0;
+  padding:0;
+  box-sizing: border-box;
+}
 
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height:400px;
+  width:300px;
+  border: black 2px solid;
+  border-radius: 5px;
+  margin:100px;
+  padding:10px;
+}
+
+.textTopBar {
+  color:black;
+  background-color: #F2C1CD;
+  width: 220px;
+  height: 25px;
+  border-bottom-left-radius: 5px;
+  border-top-left-radius: 5px;
+  border: 1px solid #DF435E;
+  outline: none;
+}
+
+.submitTopBar {
+  color:white;
+  background-color: #DF435E;
+  height: 25px;
+  width: 50px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  border-style: none;
+  cursor: pointer;
+
+}
+
+.button {
+  color:white;
+  background-color: #DF435E;
+  height: 25px;
+  width: 270px;
+  border-radius: 5px;
+  border-style: none;
+  cursor: pointer;
 }
