@@ -1,5 +1,5 @@
-import './App.css';
 import React, {useState} from "react";
+import './App.css';
 
 function App() {
 
@@ -25,7 +25,7 @@ function App() {
         </label>
         <input className="submitTopBar" onClick={handleSubmit} type="submit" value="Submit" />
       </form>
-      <div >
+      <div>
         <button className="button" onClick={handleButton}> Marcar todos como desempacados </button>
       </div>
     </div>
