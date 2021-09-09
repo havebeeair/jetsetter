@@ -1,14 +1,14 @@
-*{
+* {
   margin: 0;
   padding:0;
   box-sizing: border-box;
 }
 
-.container{
+.container {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  align-items: center ;
+  align-items: center;
   height:400px;
   width:300px;
   border: black 2px solid;
@@ -17,7 +17,7 @@
   padding:10px;
 }
 
-.textTopBar{
+.textTopBar {
   color:black;
   background-color: #F2C1CD;
   width: 220px;
@@ -28,7 +28,7 @@
   outline: none;
 }
 
-.submitTopBar{
+.submitTopBar {
   color:white;
   background-color: #DF435E;
   height: 25px;
@@ -40,7 +40,7 @@
 
 }
 
-.button{
+.button {
   color:white;
   background-color: #DF435E;
   height: 25px;
@@ -48,12 +48,4 @@
   border-radius: 5px;
   border-style: none;
   cursor: pointer;
-
-
-
-
-  
-
-
-
 }

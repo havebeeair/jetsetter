@@ -2,17 +2,6 @@ import './App.css';
 import React, {useState} from "react";
 
 function App() {
-  return (
-    <div className="container">
-      <TopBar/>
-      <Button/>
-    </div>
-  );
-}
-
-export default App;
-
-function TopBar(){
 
   let [state, setState] = useState("");
 
@@ -24,24 +13,23 @@ function TopBar(){
     console.log(state);
   }
 
-  return(
-    <form>
+  const handleButton =() => {
+    console.log("Desempacando...")
+  }
+
+  return (
+    <div className="container">
+      <form>
         <label>
           <input className="textTopBar" type="text" value={state} onChange={handleChange} />
         </label>
         <input className="submitTopBar" onClick={handleSubmit} type="submit" value="Submit" />
       </form>
-  )
-}
-
-function Button(){
-
-  const handleButton =() => {
-    console.log("Desempacando...")
-  }
-  return(
-    <div >
+      <div >
         <button className="button" onClick={handleButton}> Marcar todos como desempacados </button>
       </div>
-  )
+    </div>
+  );
 }
+
+export default App;
