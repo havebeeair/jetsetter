@@ -18,15 +18,17 @@ function App() {
   }
 
   return (
-    <div className="container">
-      <form>
-        <label>
-          <input className="textTopBar" type="text" value={state} onChange={handleChange} />
-        </label>
-        <input className="submitTopBar" onClick={handleSubmit} type="submit" value="Submit" />
-      </form>
-      <div>
-        <button className="button" onClick={handleButton}> Marcar todos como desempacados </button>
+    <div className="app-container">
+      <div className="form-container">
+        <form>
+          <label>
+            <input className="textTopBar" type="text" value={state} onChange={handleChange} />
+          </label>
+          <input className="submitTopBar" onClick={handleSubmit} type="submit" value="Submit" />
+        </form>
+        <div>
+          <button className="btn-marcar-todos" onClick={handleButton}> Marcar todos como desempacados </button>
+        </div>
       </div>
     </div>
   );
