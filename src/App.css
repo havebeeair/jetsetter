@@ -41,13 +41,18 @@
   box-sizing: border-box;
 }
 
-.container {
+.app-container {
+  display: flex;
+  justify-content: center;
+}
+
+.form-container {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
   height:400px;
-  width:300px;
+  width:400px;
   border: black 2px solid;
   border-radius: 5px;
   margin:100px;
@@ -57,8 +62,8 @@
 .textTopBar {
   color:black;
   background-color: #F2C1CD;
-  width: 220px;
-  height: 25px;
+  width: 300px;
+  height: 36px;
   border-bottom-left-radius: 5px;
   border-top-left-radius: 5px;
   border: 1px solid #DF435E;
@@ -68,8 +73,8 @@
 .submitTopBar {
   color:white;
   background-color: #DF435E;
-  height: 25px;
-  width: 50px;
+  height: 36px;
+  width: 70px;
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
   border-style: none;
@@ -77,11 +82,12 @@
 
 }
 
-.button {
+.btn-marcar-todos {
   color:white;
+  font-size: 16px;
   background-color: #DF435E;
-  height: 25px;
-  width: 270px;
+  height: 36px;
+  width: 370px;
   border-radius: 5px;
   border-style: none;
   cursor: pointer;
