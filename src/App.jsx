@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./App.css";
 import { defaultState } from "./consts/products.js";
 import Items from "./Items.jsx";
+import { obtenerItemsPorCategoria } from "./utils";
 
 function App() {
   let [state, setState] = useState("");
@@ -17,6 +18,13 @@ function App() {
   const handleButton = () => {
     console.log("Desempacando...");
   };
+
+  const listaEmpacados = obtenerItemsPorCategoria(defaultState, "packed", true);
+  const listaNoEmpacados = obtenerItemsPorCategoria(
+    defaultState,
+    "packed",
+    false
+  );
 
   return (
     <div className="app-container">
@@ -37,8 +45,8 @@ function App() {
             value="Submit"
           />
         </form>
-        <Items title="Items no empacados" items={defaultState} />
-        <Items title="Items empacados" items={defaultState} />
+        <Items title="Items no empacados" items={listaNoEmpacados} />
+        <Items title="Items empacados" items={listaEmpacados} />
         <div>
           <button className="btn-marcar-todos" onClick={handleButton}>
             {" "}
