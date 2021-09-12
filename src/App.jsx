@@ -36,7 +36,7 @@ function App() {
   };
 
   const listaEmpacados = obtenerItemsPorCategoria(lista, "packed", true);
-  const listaNoEmpacados = obtenerItemsPorCategoria(lista, "packed", false);
+  const unpackedList = obtenerItemsPorCategoria(lista, "packed", false);
 
   return (
     <div className="app-container">
@@ -59,7 +59,7 @@ function App() {
         </form>
         <Items
           title="Items no empacados"
-          items={listaNoEmpacados}
+          items={unpackedList}
           lista={lista}
           setLista={setLista}
         />
@@ -69,6 +69,7 @@ function App() {
           lista={lista}
           setLista={setLista}
         />
+    
         <div>
           <button className="btn-marcar-todos" onClick={handleButton}>
             {" "}

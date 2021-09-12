@@ -19,7 +19,7 @@ function Items(props) {
   }
 
   return (
-    <div>
+    <div className="items-container">
       <h1>
         {props.title}({props.items.length})
       </h1>
