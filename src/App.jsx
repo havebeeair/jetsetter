@@ -6,7 +6,7 @@ import { obtenerItemsPorCategoria } from "./utils";
 import uniqueId from "lodash/uniqueId";
 
 function App() {
-  let [state, setState] = useState("");
+  const [state, setState] = useState("");
 
   const [lista, setLista] = useState(defaultState);
 
