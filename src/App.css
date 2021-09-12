@@ -8,36 +8,31 @@
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  padding: 10px;
 }
 
 .checkbox-item {
-  transform: scale(2);
-  margin: 8px;
+  margin: 2px;
 }
 
-
 .item-texto {
-  height: 45px;
   margin-right: 10px;
   margin-left: 10px;
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  font-size: 30px;
+  font-size: 15px;
 }
 
 .btn-remover-item {
   all: unset;
-  height: 45px;
   padding-top: 6px;
   display: flex;
   justify-content: flex-start;
   align-items: center;
   color: palevioletred;
-  font-size: 25px;
+  font-size: 15px;
   margin: 0;
-  padding:0;
+  padding: 0;
   box-sizing: border-box;
 }
 
@@ -51,41 +46,39 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  height:400px;
-  width:400px;
+  width: 400px;
   border: black 2px solid;
   border-radius: 5px;
-  margin:100px;
-  padding:10px;
+  margin: 100px;
+  padding: 10px;
 }
 
 .textTopBar {
-  color:black;
-  background-color: #F2C1CD;
+  color: black;
+  background-color: #f2c1cd;
   width: 300px;
   height: 36px;
   border-bottom-left-radius: 5px;
   border-top-left-radius: 5px;
-  border: 1px solid #DF435E;
+  border: 1px solid #df435e;
   outline: none;
 }
 
 .submitTopBar {
-  color:white;
-  background-color: #DF435E;
+  color: white;
+  background-color: #df435e;
   height: 36px;
   width: 70px;
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
   border-style: none;
   cursor: pointer;
-
 }
 
 .btn-marcar-todos {
-  color:white;
+  color: white;
   font-size: 16px;
-  background-color: #DF435E;
+  background-color: #df435e;
   height: 36px;
   width: 370px;
   border-radius: 5px;
