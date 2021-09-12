@@ -7,6 +7,8 @@ import { obtenerItemsPorCategoria } from "./utils";
 function App() {
   let [state, setState] = useState("");
 
+  const [lista, setLista] = useState(defaultState);
+
   const handleChange = (event) => {
     setState(event.target.value);
   };
@@ -19,12 +21,8 @@ function App() {
     console.log("Desempacando...");
   };
 
-  const listaEmpacados = obtenerItemsPorCategoria(defaultState, "packed", true);
-  const listaNoEmpacados = obtenerItemsPorCategoria(
-    defaultState,
-    "packed",
-    false
-  );
+  const listaEmpacados = obtenerItemsPorCategoria(lista, "packed", true);
+  const listaNoEmpacados = obtenerItemsPorCategoria(lista, "packed", false);
 
   return (
     <div className="app-container">
@@ -45,8 +43,18 @@ function App() {
             value="Submit"
           />
         </form>
-        <Items title="Items no empacados" items={listaNoEmpacados} />
-        <Items title="Items empacados" items={listaEmpacados} />
+        <Items
+          title="Items no empacados"
+          items={listaNoEmpacados}
+          lista={lista}
+          setLista={setLista}
+        />
+        <Items
+          title="Items empacados"
+          items={listaEmpacados}
+          lista={lista}
+          setLista={setLista}
+        />
         <div>
           <button className="btn-marcar-todos" onClick={handleButton}>
             {" "}
