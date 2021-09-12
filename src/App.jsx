@@ -3,6 +3,7 @@ import "./App.css";
 import { defaultState } from "./consts/products.js";
 import Items from "./Items.jsx";
 import { obtenerItemsPorCategoria } from "./utils";
+import uniqueId from "lodash/uniqueId";
 
 function App() {
   let [state, setState] = useState("");
@@ -13,12 +14,25 @@ function App() {
     setState(event.target.value);
   };
 
-  const handleSubmit = () => {
-    console.log(state);
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    let nuevoItem = {
+      value: state,
+      id: uniqueId(),
+      packed: false,
+    };
+    let nuevaLista = [...lista, nuevoItem];
+    setLista(nuevaLista);
   };
 
   const handleButton = () => {
-    console.log("Desempacando...");
+    let listaTodoDesempacado = lista.map((item) => {
+      return {
+        ...item,
+        packed: false,
+      };
+    });
+    setLista(listaTodoDesempacado);
   };
 
   const listaEmpacados = obtenerItemsPorCategoria(lista, "packed", true);
